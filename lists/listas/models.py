@@ -7,4 +7,4 @@ class Lista(models.Model):
     quantidade = models.IntegerField()
 
     def __str__(self):
-        return f"{self.id}: {self.item} to {self.quantidade}"
+        return f"{self.id}: {self.item} , {self.quantidade}"

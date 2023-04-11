@@ -10,12 +10,21 @@
     {% extends "listas/layout.html" %}
 
     {% block body %}
-        <h1>listas:</h1>
+        <h1>Welcome, {{ request.user.first_name }}</h1>
+            <ul>
+                <li>Username: {{ request.user.username }}</li>
+                <li>Email: {{ request.user.email }}</li>
+            </ul>
+    
+            <a href="{% url 'logout' %}">Log Out</a>
+            
+        <h1>Lista de compras</h1>
         <ul>
             {% for lista in listas %}
-                <li>Produto {{ lista.id }}: {{ lista.origin }} e {{ lista.destination }}</li>
+                <li>{{ lista.item }} - {{ lista.quantidade }}</li>
             {% endfor %}
         </ul>
+        
     {% endblock %}
 </body>
 </html>

@@ -5,5 +5,5 @@ from .models import Lista
 
 def index(request):
     return render(request, "listas/produto.html", {
-        "lista": Lista.objects.all()
+        "listas": Lista.objects.all()
     })
