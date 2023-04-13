@@ -7,3 +7,5 @@ def index(request):
     return render(request, "listas/produto.html", {
         "listas": Lista.objects.all()
     })
+
+
